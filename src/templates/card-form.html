@@ -1,0 +1,28 @@
+<div class="card shadow mb-3">
+    <div class="card-body">
+        <form action="/addUser" method="POST" onsubmit="return validateFields(this);">
+            <div class="row mb-3">
+                <div class="col">
+                    <label>Username</label>
+                    <input type="text" class="form-control mb-3" name="username" type="text" placeholder="Username" pattern="^[A-Za-z][A-Za-z0-9_]{7,29}$" required>
+                </div>
+                <div class="col">
+                    <label>Name</label>
+                    <input type="text" class="form-control mb-3" name="name" type="text" placeholder="Name" pattern="^[a-z ,.'-]+$" required>
+                </div>
+                <div class="col">
+                    <label>Age</label>
+                    <input type="text" class="form-control mb-3" name="age" type="number" min="1" max="120" step="1" pattern="\d+" required>
+                </div>
+                <div class="col">
+                    <label>Email</label>
+                    <input type="text" id="email" class="form-control item mb-3" name="email" type="email" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary mb-3 mt-4" type="submit">Save</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
